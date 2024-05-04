@@ -113,7 +113,7 @@
     }
 
     .home-content {
-        @apply no-scrollbar flex w-full flex-1 flex-col gap-8 px-5 sm: px-8 py-7 lg:py-12 xl:max-h-screen xl:overflow-y-scroll;
+        @apply no-scrollbar flex w-full flex-1 flex-col gap-8 px-5 sm:px-8 py-7 lg:py-12 xl:max-h-screen xl:overflow-y-scroll;
     }
 
     .home-header {
@@ -121,11 +121,11 @@
     }
 
     .total-balance {
-        @apply flex w-full items-center gap-4 rounded-xl border border-gray-200 p-4 shadow-chart sm: gap-6 sm:p-6;
+        @apply flex w-full items-center gap-4 rounded-xl border border-gray-200 p-4 shadow-chart sm:gap-6 sm:p-6;
     }
 
     .total-balance-chart {
-        @apply flex size-full max-w-[100px] items-center sm: max-w-[120px];
+        @apply flex size-full max-w-[100px] items-center sm:max-w-[120px];
     }
 
     .total-balance-label {
@@ -133,7 +133,7 @@
     }
 
     .total-balance-amount {
-        @apply text-24 lg: text-30 flex-1 font-semibold text-gray-900;
+        @apply text-24 lg:text-30 flex-1 font-semibold text-gray-900;
     }
 
     .recent-transactions {
@@ -216,11 +216,11 @@
     }
 
     .header-box-title {
-        @apply text-24 lg: text-30 font-semibold text-gray-900;
+        @apply text-24 lg:text-30 font-semibold text-gray-900;
     }
 
     .header-box-subtext {
-        @apply text-14 lg: text-16 font-normal text-gray-600;
+        @apply text-14 lg:text-16 font-normal text-gray-600;
     }
 
     /* Bank Card */
@@ -247,7 +247,7 @@
     }
 
     .banktab-item {
-        @apply gap-[18px] border-b-2 flex px-2 sm: px-4 py-2 transition-all;
+        @apply gap-[18px] border-b-2 flex px-2 sm:px-4 py-2 transition-all;
     }
 
     /* Mobile nav */
@@ -329,7 +329,7 @@
 
     /* Root Layout */
     .root-layout {
-        @apply flex h-16 items-center justify-between p-5 shadow-creditCard sm: p-8 md:hidden;
+        @apply flex h-16 items-center justify-between p-5 shadow-creditCard sm:p-8 md:hidden;
     }
 
     /* Bank Info */
@@ -368,11 +368,11 @@
     }
 
     .sidebar-logo {
-        @apply 2xl: text-26 font-ibm-plex-serif text-[26px] font-bold text-black-1 max-xl:hidden;
+        @apply 2xl:text-26 font-ibm-plex-serif text-[26px] font-bold text-black-1 max-xl:hidden;
     }
 
     .sidebar-link {
-        @apply flex gap-3 items-center py-1 md: p-3 2xl:p-4 rounded-lg justify-center xl:justify-start;
+        @apply flex gap-3 items-center py-1 md:p-3 2xl:p-4 rounded-lg justify-center xl:justify-start;
     }
 
     .sidebar-label {
