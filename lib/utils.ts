@@ -195,17 +195,66 @@ export const getTransactionStatus = (date: Date) => {
   return date > twoDaysAgo ? "Processing" : "Success";
 };
 
-export const authFormSchema = (type: string) => z.object({
-  // sign up
-  firstName: type === 'sign-in' ? z.string().optional() : z.string().min(3),
-  lastName: type === 'sign-in' ? z.string().optional() : z.string().min(3),
-  address1: type === 'sign-in' ? z.string().optional() : z.string().max(50),
-  city: type === 'sign-in' ? z.string().optional() : z.string().max(50),
-  state: type === 'sign-in' ? z.string().optional() : z.string().min(2).max(2),
-  postalCode: type === 'sign-in' ? z.string().optional() : z.string().min(3).max(6),
-  dateOfBirth: type === 'sign-in' ? z.string().optional() : z.string().min(3),
-  ssn: type === 'sign-in' ? z.string().optional() : z.string().min(3),
-  // both
-  email: z.string().email(),
-  password: z.string().min(8),
-})
+export const authFormSchema = (type: string) =>
+  z.object({
+    // sign up
+    firstName:
+      type === "sign-in"
+        ? z.string().optional()
+        : z.string().min(3, {
+            message: "First Name must be atleast 3 characters long",
+          }),
+    lastName:
+      type === "sign-in"
+        ? z.string().optional()
+        : z.string().min(3, {
+            message: "Last Name must be atleast 3 characters long",
+          }),
+    address1:
+      type === "sign-in"
+        ? z.string().optional()
+        : z
+            .string()
+            .max(50, { message: "Address can be at-most 50 characters long" }),
+    city:
+      type === "sign-in"
+        ? z.string().optional()
+        : z
+            .string()
+            .max(50, { message: "City can be at-most 50 characters long" }),
+    state:
+      type === "sign-in"
+        ? z.string().optional()
+        : z
+            .string()
+            .min(2, { message: "State must be atleast 2 characters long" })
+            .max(2, {
+              message: "State can be atmost 2 characters long",
+            }),
+    postalCode:
+      type === "sign-in"
+        ? z.string().optional()
+        : z
+            .string()
+            .min(3, { message: "Postal code must be atleast 3 characters long" })
+            .max(6, {
+              message: "Postal code can be at-most 6 characters long",
+            }),
+    dateOfBirth:
+      type === "sign-in"
+        ? z.string().optional()
+        : z.string().min(3, {
+            message: "Date of birth must be atleast 3 characters long",
+          }),
+    ssn:
+      type === "sign-in"
+        ? z.string().optional()
+        : z.string().min(3, {
+            message: "SSN must be atleast 3 characters long",
+          }),
+    // both
+    email: z.string().email("Invalid Email. format: xxx@yyy.com"),
+    password: z
+      .string()
+      .min(8, { message: "Password must be atleast 8 characters long" }),
+  });
